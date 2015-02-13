@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "amazon2yodobashi",
+  "version": "1.0",
+  "description": "Amazon.jp add yodibashi.com link",
+  "content_scripts":  [
+    {
+    "matches": ["http://www.amazon.co.jp/*"],
+    "js": ["lib/jquery-2.1.3.min.js","lib/amazon2yodobashi.js"],
+    "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://www.amazon.co.jp/*"
+  ]
+}
